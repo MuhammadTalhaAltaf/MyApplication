@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CategoriesActivity"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ItemsActivity"
+            android:parentActivityName=".CategoriesActivity" />
+        <activity
+            android:name=".DescriptionActivity"
+            android:parentActivityName=".ItemsActivity" />
+        <activity
+            android:name=".Cart"
+            android:parentActivityName=".CategoriesActivity" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Chef"
+            android:label="@string/title_activity_chef"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Users"/>
+        <activity android:name=".RegisterChef"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".Users"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".AddItem"
+            android:parentActivityName=".ItemsActivity"/>
+        <activity android:name=".AdminRoles"
+            android:parentActivityName=".Home"/>
+        <activity android:name=".ManageItems"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".UpdateItem"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".DeleteItem"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".ManageInventory"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".AddInventoryItem"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".UpdateInventoryItem"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".DeleteInventoryItem"
+            android:parentActivityName=".AdminRoles"/>
+        <activity android:name=".Inventory"
+            android:parentActivityName=".AdminRoles"></activity>
+    </application>
+
+</manifest>
